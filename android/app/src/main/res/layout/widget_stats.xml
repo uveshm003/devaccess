@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_bg"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/widget_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:textColor="#8AB4F8"
+        android:maxLines="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/widget_battery"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_loading"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:maxLines="2" />
+
+        <TextView
+            android:id="@+id/widget_memory"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_loading"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:maxLines="2" />
+
+        <TextView
+            android:id="@+id/widget_cpu"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_loading"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:maxLines="2" />
+    </LinearLayout>
+</LinearLayout>

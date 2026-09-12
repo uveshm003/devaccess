@@ -1,0 +1,19 @@
+# Release signing for DevAccess.
+#
+# Copy this file to android/key.properties and fill it in. Both the copy and the
+# keystore itself are git-ignored (android/.gitignore) — never commit either, and
+# keep an off-machine backup of the .jks: losing it means you can never ship an
+# update to the same Play listing again.
+#
+# Generate a keystore:
+#
+#   keytool -genkey -v -keystore ~/devaccess-release.jks \
+#     -keyalg RSA -keysize 2048 -validity 10000 -alias devaccess
+#
+# storeFile is resolved relative to the android/ directory, so an absolute path
+# outside the repo (as below) is the safest choice.
+
+storeFile=/Users/you/devaccess-release.jks
+storePassword=
+keyAlias=devaccess
+keyPassword=

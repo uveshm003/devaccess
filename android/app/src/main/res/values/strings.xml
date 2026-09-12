@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DevAccess</string>
+    <string name="tile_dev_options">Developer options</string>
+    <string name="tile_animations">Animation scales</string>
+    <string name="tile_wifi">Wi‑Fi settings</string>
+    <string name="tile_dashboard">DevAccess</string>
+    <string name="widget_stats">DevAccess stats</string>
+    <string name="monitor_channel_name">Live monitoring</string>
+    <string name="monitor_channel_desc">Shown while DevAccess is sampling device telemetry.</string>
+    <string name="monitor_title">DevAccess monitor</string>
+    <string name="monitor_text">Sampling CPU, memory, battery and thermal state.</string>
+    <string name="overlay_title">Frame-time overlay</string>
+    <string name="overlay_text">Drawing the on-screen FPS overlay.</string>
+    <string name="monitor_stop">Stop</string>
+    <string name="shortcut_dev_short">Dev options</string>
+    <string name="shortcut_dev_long">Open developer options</string>
+    <string name="shortcut_report_short">Report</string>
+    <string name="shortcut_report_long">Device report</string>
+    <string name="widget_loading">…</string>
+</resources>

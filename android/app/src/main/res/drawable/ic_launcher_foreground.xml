@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The DevAccess mark: a terminal prompt (`>_`).
+
+  Geometry matches lib/widgets/brand.dart, so the launcher icon, the splash and the in-app
+  wordmark are literally the same drawing. Glyph sits inside the 72dp adaptive safe zone.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M32.4,33.5 L56.2,54 L32.4,74.5"
+        android:strokeColor="@color/brand_ink"
+        android:strokeWidth="10.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M61.6,74.5 L79.9,74.5"
+        android:strokeColor="@color/brand_ink"
+        android:strokeWidth="10.8"
+        android:strokeLineCap="round" />
+</vector>

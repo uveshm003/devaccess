@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pre-Android-12 splash: the brand mark centred on the app's own surface colour, so the
+     window that precedes the first Flutter frame is already the product. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/surface_light" />
+    <item android:gravity="center">
+        <scale
+            android:drawable="@drawable/ic_splash_logo"
+            android:scaleGravity="center"
+            android:scaleWidth="35%"
+            android:scaleHeight="35%" />
+    </item>
+</layer-list>

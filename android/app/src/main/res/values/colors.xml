@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DevAccess signal green. Kept in step with AppTheme.brandSeed on the Dart side so
+         the launcher icon, the splash and the app's first frame are the same colour. -->
+    <color name="brand">#2ED3A5</color>
+    <color name="brand_light">#3BE3B4</color>
+    <color name="brand_dark">#17B489</color>
+    <color name="brand_ink">#06231B</color>
+
+    <!-- Splash / first-frame surfaces, matching AppTheme's neutral ramp. -->
+    <color name="surface_light">#FBFBFC</color>
+    <color name="surface_dark">#0A0D11</color>
+</resources>

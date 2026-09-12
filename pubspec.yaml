@@ -1,0 +1,23 @@
+name: devaccess
+description: "DevAccess — one-tap access to Android developer options, a deep device-information dashboard, live hardware monitoring and on-device diagnostics."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+# G6 — offline-first with no backend and no third-party dependencies.
+# Everything Dart cannot reach on its own is bridged over the platform channels in
+# lib/core/platform/channels.dart (T-ARCH-1), so the dependency surface stays at zero.
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
