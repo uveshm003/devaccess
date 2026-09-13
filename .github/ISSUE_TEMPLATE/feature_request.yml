@@ -1,0 +1,50 @@
+name: Feature request
+description: Suggest a capability or improvement.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        DevAccess has hard constraints: **no third-party dependencies**, no backend, no
+        analytics, and nothing that fakes a value Android refuses to give. Proposals that
+        need a package or a server will usually be declined — see
+        [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do that DevAccess makes hard or impossible today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What should the app do? Which screen would it live on?
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: What access would it need?
+      options:
+        - T0 — nothing beyond a normal app
+        - T1 — WRITE_SETTINGS
+        - T2 — WRITE_SECURE_SETTINGS via adb
+        - T3 — root
+        - not sure
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Constraints
+      options:
+        - label: This can be built without adding a Dart or Gradle dependency.
+          required: true
+        - label: This needs no backend and sends nothing off the device unprompted.
+          required: true

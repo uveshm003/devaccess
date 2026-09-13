@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze-and-test:
+    name: Analyze & test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.9'
+          cache: true
+
+      - run: flutter --version
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      # Formatting is advisory for now: the existing tree predates `dart format`.
+      # After a one-time `dart format lib test` commit, turn this into a gate by
+      # dropping continue-on-error.
+      - name: Check formatting
+        continue-on-error: true
+        run: dart format --output=none --set-exit-if-changed lib test
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Test
+        run: flutter test
+
+  build:
+    name: Build APK (${{ matrix.flavor }})
+    runs-on: ubuntu-latest
+    needs: analyze-and-test
+    strategy:
+      fail-fast: false
+      matrix:
+        flavor: [play, foss]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.9'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      # No key.properties in CI, so this signs with the debug keys by design —
+      # the artifact is for verification only and is not distributable.
+      - name: Build debug APK
+        run: flutter build apk --debug --flavor ${{ matrix.flavor }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: devaccess-${{ matrix.flavor }}-debug
+          path: build/app/outputs/flutter-apk/*.apk
+          if-no-files-found: error
+          retention-days: 14

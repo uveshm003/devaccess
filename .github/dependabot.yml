@@ -1,0 +1,9 @@
+# DevAccess ships no third-party dependencies (G6), so there is nothing to update in
+# pubspec.yaml or Gradle. This keeps the Actions used by CI current.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    labels: ["ci"]

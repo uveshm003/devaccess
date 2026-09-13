@@ -1,0 +1,84 @@
+name: Bug report
+description: Something in DevAccess does not work as described.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please do **not** file security vulnerabilities here —
+        see [SECURITY.md](../blob/main/SECURITY.md).
+
+        DevAccess deliberately reports what Android restricts (IMEI, serial, MAC, SSID
+        without location, `/proc/stat` on locked-down builds). A field showing
+        *Restricted by OS* is usually working as intended — the README lists these.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open …
+        2. Tap …
+        3. …
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: DevAccess version
+      description: From More → About, e.g. 1.0.0 (1)
+    validations:
+      required: true
+  - type: dropdown
+    id: flavor
+    attributes:
+      label: Build flavour
+      options:
+        - play
+        - foss
+        - built from source (specify branch/commit below)
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+      description: e.g. Pixel 7a, Android 15 (API 35), OneUI 6.1
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Access tier the app resolved
+      description: Shown in More → Access tiers
+      options:
+        - T0 — base
+        - T1 — WRITE_SETTINGS granted
+        - T2 — WRITE_SECURE_SETTINGS granted
+        - T3 — root
+        - not sure
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, report export or screenshots
+      description: |
+        A redacted report export (Report → Markdown, redaction on) is the single most
+        useful attachment. `adb logcat -s flutter DevAccess` output helps for crashes.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
+        - label: This is not a platform limitation already documented in the README.
+          required: true
