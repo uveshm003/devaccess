@@ -2,7 +2,7 @@
 
 **Developer options & device insight hub — Flutter + Kotlin, Android.**
 
-[![CI](https://github.com/uveshmenpur/devaccess/actions/workflows/ci.yml/badge.svg)](https://github.com/uveshmenpur/devaccess/actions/workflows/ci.yml)
+[![CI](https://github.com/uveshm003/devaccess/actions/workflows/ci.yml/badge.svg)](https://github.com/uveshm003/devaccess/actions/workflows/ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Platform: Android 7.0+](https://img.shields.io/badge/platform-Android%207.0%2B-3ddc84.svg)](#build)
 [![Dependencies: none](https://img.shields.io/badge/dependencies-none-success.svg)](#dependencies)
@@ -283,7 +283,7 @@ Issues and pull requests are welcome. Start with **[CONTRIBUTING.md](CONTRIBUTIN
 it covers the local setup, the ground rules (no new dependencies, no backend, surface
 platform limits rather than faking them) and what a reviewable PR looks like.
 
-- Bugs and feature requests → [open an issue](https://github.com/uveshmenpur/devaccess/issues/new/choose)
+- Bugs and feature requests → [open an issue](https://github.com/uveshm003/devaccess/issues/new/choose)
 - Security vulnerabilities → **[SECURITY.md](SECURITY.md)**, never a public issue
 - Release history → [CHANGELOG.md](CHANGELOG.md)
 - Participation is governed by the [Code of Conduct](CODE_OF_CONDUCT.md)

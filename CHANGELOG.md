@@ -51,5 +51,5 @@ Initial public release.
   release signing via a git-ignored `android/key.properties` with a documented debug-key
   fallback, and zero third-party dependencies in Dart or Kotlin.
 
-[Unreleased]: https://github.com/uveshmenpur/devaccess/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/uveshmenpur/devaccess/releases/tag/v1.0.0
+[Unreleased]: https://github.com/uveshm003/devaccess/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/uveshm003/devaccess/releases/tag/v1.0.0

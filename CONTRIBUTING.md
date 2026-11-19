@@ -7,7 +7,7 @@ follows.
 ## Getting set up
 
 ```bash
-git clone https://github.com/uveshmenpur/devaccess.git
+git clone https://github.com/uveshm003/devaccess.git
 cd devaccess
 flutter pub get
 flutter test
